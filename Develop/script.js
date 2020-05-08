@@ -10,7 +10,6 @@ var charSel = "";
 var passLenght = "";
 var userPassword = [];
 
-// var userSelection = prompt("Choose password criteria: lowercase, uppercase, numbers or special character?");
 
 // create function to generate password based on user selction 
 function generatePassword() {
@@ -27,7 +26,6 @@ function generatePassword() {
     specialCharSel = (prompt("If special characters in password? Yes (y) or No (n)")).toLowerCase();
 
 
-    // lowercaseValue = (prompt("Do you want lowercase characters in password? Yes (y) or No (n)")).toLowerCase();  
 // error message will display is password is less than 8 or greater than 128
   } else if (passLenght < 8 || passLenght > 128) {
     alert("Error, please enter a number between 8 and 128");
@@ -36,20 +34,25 @@ function generatePassword() {
 
 //if the user selection is yes then add to character criteria option
   if (lowerCaseSel == "y") {
-    charSel =+ lowerCase
-    lowerCase.push(userPassword)
+    charSel =+ lowerCase;
+    userPassword.push(lowerCase);
+    console.log(lowerCase)
+   
+    
   }
   if (upperCaseSel == "y") {
-    charSel =+ upperCase
-    upperCase.push[userPassword]
+    charSel =+ upperCase;
+    userPassword.push(upperCase);
   }
   if (numSel.value == "y") {
-    charSel =+ num
-    num.push[userPassword]
+    charSel =+ num;
+    userPassword.push(num);
+    // num.push[userPassword]
   }
   if (specialCharSel == "y") {
-    charSel =+ specialChar
-    specialChar.push[userPassword]
+    charSel =+ specialChar;
+    userPassword.push(specialChar);
+    // specialChar.push[userPassword]
   }
  
   console.log(charSel)
@@ -59,25 +62,17 @@ function generatePassword() {
   // create an alert message if no character set is selected, prompting user to make selection 
   if (charSel == "") {
     alert("Please select at least one character set!");
-    
+  
   } else {
     // for (var i = 0; i < passLenght; i++) {
-    //   // userPassword += charSel.charAt(Math.floor(Math.random() * charSel.length))
-    //   userPassword(Math.floor(Math.random () * passLenght))
+    //   userPassword(Math.floor(Math.random() * charSel.length)); 
+
+      
     // }
+
+  }
   }
  
-
-}
-
-  
-
-
-
-
-
-
-
 
 
 // Write password to the #password input

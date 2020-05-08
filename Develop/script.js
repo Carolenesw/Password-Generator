@@ -37,24 +37,24 @@ function generatePassword() {
     charSel =+ lowerCase;
     userPassword.push(lowerCase);
     console.log(lowerCase)
-   
-    
   }
   if (upperCaseSel == "y") {
     charSel =+ upperCase;
     userPassword.push(upperCase);
   }
-  if (numSel.value == "y") {
+  if (numSel == "y") {
     charSel =+ num;
     userPassword.push(num);
-    // num.push[userPassword]
   }
   if (specialCharSel == "y") {
     charSel =+ specialChar;
     userPassword.push(specialChar);
-    // specialChar.push[userPassword]
   }
  
+
+  console.log(userPassword.join(''))
+//   console.log(elements.join(''));
+// // expected output: "FireAirWater"
   console.log(charSel)
   console.log(userPassword)
   console.log (passLenght)
@@ -64,16 +64,17 @@ function generatePassword() {
     alert("Please select at least one character set!");
   
   } else {
-    // for (var i = 0; i < passLenght; i++) {
-    //   userPassword(Math.floor(Math.random() * charSel.length)); 
-
-      
-    // }
+    // use for loop to generate password based on lenght and character selected
+    password = userPassword.join('')
+    // use the join method to join the user selection
+    for (var i = 0; i < passLenght; i++) {
+      password[Math.floor(Math.random() * password.length)];   
+      console.log(password)    
+    }
 
   }
   }
  
-
 
 // Write password to the #password input
 function writePassword() {

@@ -25,7 +25,15 @@ function generatePassword() {
     lowerCaseSel = prompt(("If lowercase character in password. Yes (y) or No (n)")).toLowerCase;
     upperCaseSel = prompt(("If uppercase character password. Yes (y) or No (n)")).toLowerCase;
     numSel = prompt(("If numbers character password. Yes (y) or No (n)")).toLowerCase;
-    specialCharSel = prompt(("If special characters in password. Yes (y) or No (n)")).toLowerCase
+    specialCharSel = prompt(("If special characters in password. Yes (y) or No (n)")).toLowerCase;
+
+// error message will display is password is less than 8 or greater than 128
+  } else if (passLenght < 8 || passLenght > 128) {
+    alert("Error, please enter a number between 8 and 128")
+  }
+
+
+
   }  
 
  
@@ -33,7 +41,7 @@ function generatePassword() {
   
 
 
-}
+
 
 
 

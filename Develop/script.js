@@ -19,67 +19,60 @@ function generatePassword() {
   // user password selection criteria 
   var passLenght = Number(prompt("Please choose a password lenght between 8 and 128"));
 
-  if (passLenght >= 8 && passLenght <=128){
+  if (passLenght >= 8 && passLenght <= 128) {
     lowerCaseSel = (prompt("If lowercase character in password? Yes (y) or No (n)")).toLowerCase();
     upperCaseSel = (prompt("If uppercase character password? Yes (y) or No (n)")).toLowerCase();
     numSel = (prompt("If numbers character password? Yes (y) or No (n)")).toLowerCase();
     specialCharSel = (prompt("If special characters in password? Yes (y) or No (n)")).toLowerCase();
 
 
-// error message will display is password is less than 8 or greater than 128
+    // error message will display is password is less than 8 or greater than 128
   } else if (passLenght < 8 || passLenght > 128) {
     alert("Error, please enter a number between 8 and 128");
     generatePassword()
   }
 
-//if the user selection is yes then add to character criteria option
+  //if the user selection is yes then push to UserPassword array
   if (lowerCaseSel == "y") {
-    charSel =+ lowerCase;
+    charSel = + lowerCase;
     userPassword.push(lowerCase);
-    console.log(lowerCase)
   }
   if (upperCaseSel == "y") {
-    charSel =+ upperCase;
+    charSel = + upperCase;
     userPassword.push(upperCase);
   }
   if (numSel == "y") {
-    charSel =+ num;
+    charSel = + num;
     userPassword.push(num);
   }
   if (specialCharSel == "y") {
-    charSel =+ specialChar;
+    charSel = + specialChar;
     userPassword.push(specialChar);
   }
- 
-
-  // console.log(userPassword.join(''))
-//   console.log(elements.join(''));
-// // expected output: "FireAirWater"
-  console.log(charSel)
-  console.log(userPassword)
-  console.log (passLenght)
 
   // create an alert message if no character set is selected, prompting user to make selection 
   if (charSel == "") {
     alert("Please select at least one character set!");
-  
+    generatePassword();
+
   } else {
     // use the join method to combine all variable(s) pushed to the array from user selection
     password = userPassword.join('')
-    console.log(password)
 
-    // use for loop to generate password based on lenght and character selected
-          for(var i = 0; i < passLenght; i++) {
-            var passwordGenerated = password.charAt(Math.floor(Math.random() * password.length));
-         
-            console.log(passwordGenerated);
-      }
-         
+    // use for loop to generate password based on lenght and character selected using math.random/floor method
+    for (var i = 0; i < passLenght; i++) {
+      var passwordGenerated = password.charAt(Math.floor(Math.random() * password.length));
+
+      console.log(passwordGenerated);
+      // var newPassword = passwordGenerated.join();
+      // console.log(newPassword);
+
+      // var copyPassword = document.getElementById("password");
     }
-  
+
   }
-  
- 
+
+}
 
 // Write password to the #password input
 function writePassword() {

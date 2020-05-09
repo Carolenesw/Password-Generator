@@ -64,10 +64,7 @@ function generatePassword() {
       var passwordGenerated = password.charAt(Math.floor(Math.random() * password.length));
 
       console.log(passwordGenerated);
-      // var newPassword = passwordGenerated.join();
-      // console.log(newPassword);
 
-      // var copyPassword = document.getElementById("password");
     }
 
   }

@@ -3,11 +3,11 @@
 ## User Story 
 
 Password Generator application generates a secure password for user, based on criteras selected by the user.
-    - Password Length 
-    - Numbers
-    - Special characters
-    - Uppercase character
-    - Lowercase character 
+- Password Length 
+- Numbers
+- Special characters
+- Uppercase character
+- Lowercase character 
 
  The appplication will generates a random match based on the length of the password selected.
  
@@ -21,10 +21,5 @@ Password Generator application generates a secure password for user, based on cr
 - Google Fonts  
 
 
-SDFGHKJGHB
-GHJKL
-GHJKL
-GHJ
-GHJ
 
 

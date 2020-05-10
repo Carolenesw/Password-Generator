@@ -4,8 +4,7 @@ var generateBtn = document.querySelector("#generate");
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var num = "0123456789";
-var specialChar = "`~!@<#>$?%^&.*,-_=+{[]}|\);:'";
-//how do i add " and /
+var specialChar = "`~!@<#>$?%^&.\\\"*,-_=+{[]}|);:'";
 var charSel = "";
 var passLenght = "";
 var userPassword = [];
@@ -62,16 +61,15 @@ function generatePassword() {
 
     // use for loop to generate password based on lenght and character selected using math.random/floor method
     for (var i = 0; i < passLenght; i++) {
-      passwordGenerated = password.charAt(Math.floor(Math.random() * password.length));
+      passwordGenerated = passwordGenerated + password.charAt(Math.floor(Math.random() * password.length));
      
-      // console.log(passwordGenerated[i]);
+      
       console.log(passwordGenerated);
     }
 
     }
 
   }
-
 
 
 // Write password to the #password input

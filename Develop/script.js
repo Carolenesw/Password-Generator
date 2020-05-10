@@ -9,6 +9,7 @@ var specialChar = "`~!@<#>$?%^&.*,-_=+{[]}|\);:'";
 var charSel = "";
 var passLenght = "";
 var userPassword = [];
+var passwordGenerated = "";
 
 
 // create function to generate password based on user selction 
@@ -61,22 +62,24 @@ function generatePassword() {
 
     // use for loop to generate password based on lenght and character selected using math.random/floor method
     for (var i = 0; i < passLenght; i++) {
-      var passwordGenerated = password.charAt(Math.floor(Math.random() * password.length));
-
+      passwordGenerated = password.charAt(Math.floor(Math.random() * password.length));
+     
+      // console.log(passwordGenerated[i]);
       console.log(passwordGenerated);
+    }
 
     }
 
   }
 
-}
+
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  passwordText.value = passwordGenerated;
 
 }
 
